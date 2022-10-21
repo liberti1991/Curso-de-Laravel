@@ -16,3 +16,6 @@ Route::get('/contato/{nome}/{sobrenome}/{idade?}', function (string $nome, strin
     // echo 'Estamos aqui ' . $nome . ' ' . $sobrenome;
     echo "Estamos aqui  $nome  $sobrenome $idade";
 });
+
+
+// php artisan serve
