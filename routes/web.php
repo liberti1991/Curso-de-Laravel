@@ -12,6 +12,7 @@ Route::get('/contato', 'ContatoController@contato');
 //     echo 'Estamos aqui ' . $nome;
 // });
 
-Route::get('/contato/{nome}/{sobrenome}', function (string $nome, string $sobrenome) {
-    echo 'Estamos aqui ' . $nome . ' ' . $sobrenome;
+Route::get('/contato/{nome}/{sobrenome}/{idade?}', function (string $nome, string $sobrenome, int $idade = 01) {
+    // echo 'Estamos aqui ' . $nome . ' ' . $sobrenome;
+    echo "Estamos aqui  $nome  $sobrenome $idade";
 });
