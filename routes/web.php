@@ -12,10 +12,16 @@ Route::get('/contato', 'ContatoController@contato');
 //     echo 'Estamos aqui ' . $nome;
 // });
 
-Route::get('/contato/{nome}/{sobrenome}/{idade?}', function (string $nome, string $sobrenome, int $idade = 01) {
-    // echo 'Estamos aqui ' . $nome . ' ' . $sobrenome;
-    echo "Estamos aqui  $nome  $sobrenome $idade";
-});
+// Route::get('/contato/{nome}/{sobrenome}/{idade?}', function (string $nome, string $sobrenome, int $idade = 01) {
+//     // echo 'Estamos aqui ' . $nome . ' ' . $sobrenome;
+//     echo "Estamos aqui  $nome  $sobrenome $idade";
+// });
 
+Route::get('/contato/{nome}/{category_id}', function (
+    string $nome = 'desconhecido',
+    int $category_id = 1
+) {
+    echo "Estamos aqui  $nome  $category_id";
+})->where('category_id', '[0-9]+');
 
 // php artisan serve
