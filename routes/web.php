@@ -12,7 +12,7 @@ Route::get('/login', function () {
     return 'Login';
 })->name('site.login');
 
-Route::prefix('/app')->group(function(){
+Route::prefix('/app')->group(function () {
 
     Route::get('/clientes', function () {
         return 'Clientes';
@@ -26,6 +26,21 @@ Route::prefix('/app')->group(function(){
         return 'Produtos';
     })->name('app.produtos');
 });
+
+Route::get('/rota1', function () {
+    echo 'rota 1';
+})->name('site.rota1');
+
+
+Route::get('/rota2', function () {
+    return redirect()->route('site.rota1');
+})->name('site.rota2');
+
+// Route::redirect('/rota2','/rota1');
+
+
+
+
 
 // Route::get('/contato/{nome}', function (string $nome) {
 //     echo 'Estamos aqui ' . $nome;
