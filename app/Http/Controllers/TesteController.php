@@ -8,6 +8,7 @@ class TesteController extends Controller
 {
     public function teste(int $p1, $p2)
     {
-        echo "A soma de $p1 e $p2 é:" . ($p1 + $p2);
+        // echo "A soma de $p1 e $p2 é:" . ($p1 + $p2);
+        return view('site.teste', ['x' => $p1, 'y' => $p2]);
     }
 }
