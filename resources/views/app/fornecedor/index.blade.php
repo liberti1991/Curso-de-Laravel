@@ -22,7 +22,10 @@
     fornecedor inativo
 @endif --}}
 
-@unless($fornecedores[0]['status'] === 'S')
+{{-- @unless($fornecedores[0]['status'] === 'S')
     fornecedor falso
-@endunless
+@endunless --}}
+
+{{-- @isset === retorna true estiver definida --}}
+
 
