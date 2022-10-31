@@ -28,4 +28,4 @@
 
 {{-- @isset === retorna true estiver definida --}}
 
-
+{{-- @empty === "" retorna true --}}
